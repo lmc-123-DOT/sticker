@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>桌面贴纸 · 三年规划</title>
+<style>
+  :root{--bg:#0d0d0c;--fg:#f4f3f0;--dim:#8c8a82;--line:rgba(255,255,255,.12);--accent:#5eead4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font-family:system-ui,"Microsoft YaHei",sans-serif;line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:80px 24px 120px}
+  .kicker{font-size:11px;letter-spacing:.24em;color:var(--accent);text-transform:uppercase}
+  h1{font-size:clamp(34px,6vw,56px);line-height:1.15;margin:16px 0 20px;letter-spacing:-.02em}
+  .sub{color:var(--dim);font-size:16px;max-width:560px}
+  .shot{margin:48px 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#141413}
+  .shot img{display:block;width:100%;height:auto}
+  h2{font-size:20px;margin:44px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  ul{list-style:none;display:grid;gap:10px}
+  li{padding-left:22px;position:relative;color:#d6d4cf}
+  li::before{content:"·";position:absolute;left:6px;color:var(--accent);font-weight:bold}
+  code{background:#1a1a19;padding:2px 6px;border-radius:4px;font-family:Consolas,monospace;font-size:.9em}
+  pre{background:#141413;border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto;margin:14px 0}
+  pre code{background:none;padding:0;font-size:13px;line-height:1.6}
+  .btn{display:inline-block;margin-top:32px;padding:12px 26px;border-radius:10px;background:var(--accent);color:#06231f;text-decoration:none;font-weight:600}
+  .btn:hover{opacity:.88}
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Desktop Sticker</div>
+  <h1>桌面贴纸<br>三年规划</h1>
+  <p class="sub">一个无边框、置顶、圆角的小贴纸，直接贴在桌面上。三个页签切换大一 / 大二 / 大三，点一下就打勾，勾选状态自动保存。</p>
+
+  <div class="shot"><img src="app-preview.png" alt="桌面贴纸预览"></div>
+
+  <h2>功能</h2>
+  <ul>
+    <li>无边框 + 始终置顶，像便签一样贴在桌面</li>
+    <li>三个页签：大一 / 大二 / 大三</li>
+    <li>点条目打勾，状态自动存盘，下次打开还在</li>
+    <li>左键按住拖动，右键出菜单</li>
+    <li>规划内容在 <code>data/plans.json</code>，随时改</li>
+    <li>纯 Python + tkinter，无需安装第三方库</li>
+  </ul>
+
+  <h2>怎么运行</h2>
+  <pre><code># 需要 Python 3.8+
+python sticker.py</code></pre>
+  <p class="sub">Windows 用户也可以直接双击 <code>启动.cmd</code>。想开机自启的话，把 <code>启动.lnk</code> 放进启动文件夹。</p>
+
+  <h2>改自己的规划</h2>
+  <p class="sub">打开 <code>data/plans.json</code>，按这个结构改：</p>
+  <pre><code>{
+  "大一": ["考过四级", "加入一个社团", "..."],
+  "大二": ["..."],
+  "大三": ["..."]
+}</code></pre>
+
+  <a class="btn" href="https://github.com/lmc-123-DOT/desktop-sticker">查看源码 / 下载</a>
+
+  <footer>Python · tkinter · 无第三方依赖</footer>
+</div>
+</body>
+</html>

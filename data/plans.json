@@ -1,0 +1,42 @@
+{
+  "title": "三年规划",
+  "footer": "",
+  "phases": [
+    {
+      "id": "y1",
+      "name": "大一",
+      "sub": "破局与输出",
+      "accent": "#3E9E6E",
+      "groups": [
+        {
+          "title": "目标",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "y2",
+      "name": "大二",
+      "sub": "深水区与护城河",
+      "accent": "#C08421",
+      "groups": [
+        {
+          "title": "目标",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "y3",
+      "name": "大三",
+      "sub": "亮剑与实战",
+      "accent": "#C8553D",
+      "groups": [
+        {
+          "title": "目标",
+          "items": []
+        }
+      ]
+    }
+  ]
+}
